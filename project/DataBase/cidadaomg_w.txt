@@ -1,0 +1,26 @@
+DROP DATABASE IF EXISTS cidadaoalmg_w;
+
+CREATE DATABASE cidadaoalmg_w
+CHARACTER SET="utf8"
+COLLATE="utf8_general_ci";
+
+DROP TABLE IF EXISTS partidos;
+
+CREATE TABLE partidos(id INT AUTO_INCREMENT,
+		      nome VARCHAR(50),
+		      descricao TEXT,
+		      created_at TIMESTAMP,
+		      updated_at TIMESTAMP,
+		      PRIMARY KEY(id));
+
+DROP TABLE IF EXISTS deputados;
+
+CREATE TABLE deputados(id INT AUTO_INCREMENT,
+		       cod_almg INT,
+		       nome VARCHAR(50),
+		       cod_partido INT,
+		       tag_localizacao INT,
+		       ano DATE,
+		       created_at TIMESTAMP,
+		       updated_at TIMESTAMP,
+		       PRIMARY KEY(id));
