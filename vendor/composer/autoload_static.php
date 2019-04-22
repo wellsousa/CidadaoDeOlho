@@ -378,7 +378,9 @@ class ComposerStaticInit88bd794d1abd713768d42d4d4cd9cbbb
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Libraries\\ALMG\\ALMG' => __DIR__ . '/../..' . '/app/Libraries/ALMG/ALMG.php',
+        'App\\Models\\Deputado' => __DIR__ . '/../..' . '/app/Models/Deputado.php',
         'App\\Models\\Partido' => __DIR__ . '/../..' . '/app/Models/Partido.php',
+        'App\\Models\\VerbaIndenizatoria' => __DIR__ . '/../..' . '/app/Models/VerbaIndenizatoria.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -451,6 +453,7 @@ class ComposerStaticInit88bd794d1abd713768d42d4d4cd9cbbb
         'DeepCopy\\TypeFilter\\Spl\\SplDoublyLinkedListFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/Spl/SplDoublyLinkedListFilter.php',
         'DeepCopy\\TypeFilter\\TypeFilter' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeFilter/TypeFilter.php',
         'DeepCopy\\TypeMatcher\\TypeMatcher' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/TypeMatcher/TypeMatcher.php',
+        'DeputadosSeeder' => __DIR__ . '/../..' . '/database/seeds/DeputadosSeeder.php',
         'Doctrine\\Common\\Inflector\\Inflector' => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector/Inflector.php',
         'Doctrine\\Common\\Lexer\\AbstractLexer' => __DIR__ . '/..' . '/doctrine/lexer/lib/Doctrine/Common/Lexer/AbstractLexer.php',
         'Doctrine\\Instantiator\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator/Exception/ExceptionInterface.php',
@@ -3890,6 +3893,7 @@ class ComposerStaticInit88bd794d1abd713768d42d4d4cd9cbbb
         'phpDocumentor\\Reflection\\Types\\String_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/String_.php',
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
+        'verbasIndenizatoriasSeeder' => __DIR__ . '/../..' . '/database/seeds/verbasIndenizatoriasSeeder.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

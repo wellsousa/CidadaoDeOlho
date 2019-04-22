@@ -20,7 +20,7 @@ CREATE TABLE deputados(id INT AUTO_INCREMENT,
 		       nome VARCHAR(50),
 		       cod_partido INT,
 		       tag_localizacao INT,
-		       ano DATE,
 		       created_at TIMESTAMP,
 		       updated_at TIMESTAMP,
-		       PRIMARY KEY(id));
+		       PRIMARY KEY(id),
+ 		       CONSTRAINT FK_cod_partido FOREIGN KEY(cod_partido) REFERENCES partidos(id));

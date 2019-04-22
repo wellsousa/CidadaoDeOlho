@@ -88,10 +88,12 @@ class AlmgController extends Controller
     public function teste(){
 
         $almg = new ALMG();
-        $json = $almg->getPartidos();
+        for($i=1; $i<=12; $i++){
+        $json = $almg->getVerbasIndenizatorias(22616, 2018,$i);
 
-//        var_dump($json);
-//        exit;
+        var_dump($json);
+        }
+        exit;
         
         $count = count($json);
 
