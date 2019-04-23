@@ -20,9 +20,12 @@ class verbasIndenizatoriasSeeder extends Seeder
         $almg = new ALMG();
         $deputados = Deputado::all();
 
+        $tot = count($deputados);
+        $cont = 0;
+
         foreach($deputados as $deputado){
             
-            for($mes = 3; $mes <=3; $mes++){
+            for($mes = 1; $mes <=3; $mes++){
                 $verbas = $almg->getVerbasIndenizatorias($deputado->id_almg, 2018, $mes);
 
 
@@ -37,6 +40,11 @@ class verbasIndenizatoriasSeeder extends Seeder
                     $registro->save();
                 }
             }
+
+            $cont++;
+            $progresso = round(($cont/$tot)*100);
+            echo "\n Aguarde {$progresso}% concluído...";
+            sleep(5);
             
         }
     }
