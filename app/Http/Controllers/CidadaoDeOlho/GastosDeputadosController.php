@@ -48,10 +48,35 @@ class GastosDeputadosController extends Controller
 
         }
 
-        //var_dump($tabela);
+        
+        
+        
+        $maiores_gastadores = [];
+        //var_dump($maior);
+        //exit;
+        for($k = 0; $k < 5; $k++){
+            $maior = $tabela[0];
+            $max_elementos = count($tabela);
+            $indice = 0;
+            $j = 0;
+
+            foreach($tabela as $item){
+                if($tabela[$j]['gasto'] > $maior['gasto']){
+
+                    $maior = $tabela[$j];
+                    $indice = $j;
+                }
+
+                $j++;
+            }
+
+            $maiores_gastadores[$k] = $maior;
+            $tabela[$indice]['gasto'] = 0;
+        }
+        //var_dump($maiores_gastadores);
         //exit;
 
-        return view('CidadaoDeOlho.index',["tabela" => $tabela]);
+        return view('CidadaoDeOlho.index',["maiores_gastadores" => $maiores_gastadores]);
     }
 
     /**

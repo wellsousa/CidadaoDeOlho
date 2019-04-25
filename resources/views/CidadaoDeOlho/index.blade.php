@@ -9,7 +9,7 @@
     <div class="card-body">
         
 
-        @if(count($tabela) > 0)
+        @if(count($maiores_gastadores) > 0)
             <h3 class="card-title text-center">Gastos dos Deputados - 2018</h3>
             <table class="table table-hover">
                 <thead>
@@ -20,7 +20,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($tabela as $deputado)
+                    @foreach($maiores_gastadores as $deputado)
                         <tr>
                             <td>{{ $deputado['id_almg'] }}</td>
                             <td>{{ $deputado['nome'] }}</td>

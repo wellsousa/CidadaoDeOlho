@@ -31,3 +31,10 @@ php artisan serve
 Abra o browser e digite o enderço indicada pelo comando acima, por exemplo:
 
 localhost:8000/
+
+
+Projeto finalizado e funcional embora o front-end esteja bastante simples. 
+
+Descrição:
+
+Os scripts populam o banco implementado no MariaDB com os dados da API pulbica da ALMG. A injeção de dados é feita através de migrations e seeds. Foram utilizadas classes auxiliares como Repository para busca de dados no banco e criado um diretório exclusivo para classes custumizadas dentro de app\Libraries\ALMG.
