@@ -28,9 +28,30 @@ class GastosDeputadosController extends Controller
     public function index()
     {
         //
-        echo $this->repository->teste();
-        exit;
-        return view('CidadaoDeOlho.index');
+        $deputados = Deputado::all();
+
+        $tabela = [];
+        $i =0;
+
+
+        foreach($deputados as $deputado){
+            $gasto = $this->repository->getSomaGastosDeputado($deputado->id_almg);
+
+
+            if(isset($gasto)){
+                $tabela[$i] = ['id_almg'=> $deputado->id_almg,
+                            'nome' => $deputado->nome,  
+                            'gasto' => $gasto->anual];
+
+                $i++;
+            }
+
+        }
+
+        //var_dump($tabela);
+        //exit;
+
+        return view('CidadaoDeOlho.index',["tabela" => $tabela]);
     }
 
     /**
