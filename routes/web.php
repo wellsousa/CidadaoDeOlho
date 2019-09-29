@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', 'CidadaoDeOlho\GastosDeputadosController@index');
+//Route::get('/', 'CidadaoDeOlho\GastosDeputadosController@index');
 
 Route::get('/teste', 'ALMG\AlmgController@teste');
+
+Route::get('/', 'Home\HomeController@index');
+
+//rotas genericas para diversos crawlers(outros estados)
+Route::get('/crawler', 'Crawler\CrawlerController@index');
+//crawler da ALMG
+Route::get('/crawler/almg', 'Crawler\ALMGCrawlerController@index');

@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\ALMG;
+namespace App\Http\Controllers\Crawler;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-use App\Libraries\ALMG\ALMG;
-
-class AlmgController extends Controller
+class CrawlerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +15,6 @@ class AlmgController extends Controller
     public function index()
     {
         //
-
-        return "cheguei aqui";
     }
 
     /**
@@ -85,25 +81,5 @@ class AlmgController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function teste(){
-
-        $almg = new ALMG();
-        for($i=1; $i<=12; $i++){
-        $json = $almg->getVerbasIndenizatorias(22616, 2018,$i);
-
-        var_dump($json);
-        }
-        exit;
-        
-        $count = count($json);
-
-        foreach($json as $data){
-            echo $count;
-            $count++;
-        }
-
-        exit;
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVerbasIndenizatoriasTable extends Migration
+class CreatePrestadorasServicosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateVerbasIndenizatoriasTable extends Migration
      */
     public function up()
     {
-        Schema::create('verbas_indenizatorias', function (Blueprint $table) {
+        Schema::create('prestadoras_servicos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('id_almg')->unsigned();
-            $table->timestamp('data_referencia');
-            $table->integer('cod_tipo_despesa');
-            $table->float('valor_total');
-            $table->integer('cod_detalhe_verba'); 
+            $table->string('cnpj', 50);
+            $table->string('razao_social', 300);
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateVerbasIndenizatoriasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('verbas_indenizatorias');
+        Schema::dropIfExists('prestadora_servicos');
     }
 }

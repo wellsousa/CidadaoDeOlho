@@ -24,3 +24,46 @@ CREATE TABLE deputados(id INT AUTO_INCREMENT,
 		       updated_at TIMESTAMP,
 		       PRIMARY KEY(id),
  		       CONSTRAINT FK_cod_partido FOREIGN KEY(cod_partido) REFERENCES partidos(id));
+
+
+DROP TABLE IF EXISTS tipos_verbas_indenizatorias;
+
+CREATE TABLE tipos_verbas_indenizatorias(id INT AUTO_INCREMENT,
+                        cod_tipo_despesa INT(10),
+ 						desc_tipo_despesa VARCHAR(50),
+						created_at TIMESTAMP,
+						update_at TIMESTAMP,
+						PRIMARY KEY(id));
+
+
+DROP TABLE IF EXISTS prestadoras_servico;
+
+CREATE TABLE prestadoras_servico(id INT AUTO_INCREMENT,
+                                 cnpj VARCHAR(50),
+								 razao_social VARCHAR(100),
+								 created_at TIMESTAMP,
+								 updated_at TIMESTAMP);
+
+DROP TABLE IF EXISTS verba_indenizatoria;
+
+CREATE TABLE verbas_indenizatorias(id INT AUTO_INCREMENT,
+								id_almg INT,
+								data_referencia TIMESTAMP,
+								cod_tipo_despesa INT,
+								valor_total DOUBLE(8,2),
+								cod_detalhe_verba INT,
+								created_at TIMESTAMP,
+								updated_at TIMESTAMP,
+                                PRIMARY KEY(id));
+
+DROP TABLE IF EXISTS detalhes_verbas;
+
+CREATE TABLE detalhes_verbas(id INT AUTO_INCREMENT,
+							 cod_prestadora INT,
+							 cod_documento VARCHAR(50),
+							 data_emisssao TIMESTAMP,
+							 valor_despesa DOUBLE(8,2),
+							 valor_reembolsado DOUBLE(8,2),
+							 created_at TIMESTAMP,
+							 updated_at TIMESTAMP,
+							 PRIMARY KEY(id));
